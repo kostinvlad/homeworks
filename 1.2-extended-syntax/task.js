@@ -21,26 +21,28 @@ function getResult(a,b,c){
 function getAverageMark(marks){
     console.log(marks);
     let evalWhole = 0;
+
+    if(marks.length === 0){
+        return 0;
+    }
     
-    if(marks.length > 5 || marks.length === 5){
+    else {
         console.log("Оценок пять или больше")
         marks = marks.slice(0, 5)
         for(let i = 0; i < marks.length; i++){
-            evalWhole += parseInt(marks[i]);
-        }
-        return evalWhole / marks.length;
-    }
-    else if(marks.length < 5 && marks.length !== 0){
-        for(let i = 0; i < marks.length; i++){
-        evalWhole += parseInt(marks[i]); 
-        }
-        return evalWhole / marks.length;
-   }
-    else {
-        
-        return evalWhole;
+            evalWhole += parseInt(marks[i]); 
+            }
+            return evalWhole / marks.length;
    }
 }
+
+//Только присутствует один важный недочёт, который следует исправить. 
+//Во втором задании у вас в двух условных конструкциях выполняется одно
+// и тоже (подсчёт и возвращение средней оценки), это получается 
+// копипаст. Попробуйте, в случае отсутствия элементов не присваивать
+// среднюю оценку ноль, а возвращать число ноль. 
+// Тогда в следующем условии вам нужно будет только обрезать массив,
+// а затем уже считать среднюю оценку в любом случае.
 
 function askDrink(name, dateOfBirthday){
     let result = (`Не желаете ли олд-фэшн, ${name}?`);
