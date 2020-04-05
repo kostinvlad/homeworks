@@ -27,5 +27,6 @@ function getGreeting(name) {
     if(name === undefined || name === null || name === ""){
         name = "Аноним";
     }
-    return alert(`Привет, мир! Меня зовут ${name}`);
+    console.log(`Привет, мир! Меня зовут ${name}`);
+    return (`Привет, мир! Меня зовут ${name}`);
 }
