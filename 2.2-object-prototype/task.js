@@ -1,17 +1,12 @@
 
-//  Если аргумент 
-
-
 function getAnimalSound(animal) {
     if(animal === undefined){
         return null
     }
-    
-    else  {
+    else if(animal !== undefined){
         let sound = animal["sound"];
         return sound
-    }
-      
+    }    
 }
 
 
@@ -30,7 +25,7 @@ function getAverageMark(marks) {
 
 getAverageMark([2, 4, 5])
 
-//  ЗАдача 3
+//  Зaдача 3
 
 let now = Date.now();
 

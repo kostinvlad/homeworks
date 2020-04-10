@@ -11,6 +11,8 @@ describe('Домашнее задание к занятию 2.3 «ООП в JS (
       range: 1,
     });
 
+
+
     studentLog = new StudentLog("Иван Петров");
   }) 
 
